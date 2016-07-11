@@ -42,6 +42,7 @@
                             if(self.lazyCallBack && typeof self.lazyCallBack === 'function'){
                                 self.lazyCallBack(xmlhttp.responseText);
                             }else {
+                                //refer to the handlebars{{{}}}
                                 document.querySelector('.'+self.lazyClass).parentNode.appendChild(new DOMParser().parseFromString(xmlhttp.responseText,"text/xml"));
                             }
                             self.isload = true;
